@@ -42,13 +42,9 @@ public class AdminPage extends AppCompatActivity {
     RecyclerView recyclerView;
     adaperAdmin adapter;
     FloatingActionButton fbAdd, fbOut;
-    Context context;
-    FirebaseAuth firebaseAuth;
     private ArrayList<Salles> listeSalles;
     private DatabaseReference myref;
     private final FirebaseDatabase database = FirebaseDatabase.getInstance();
-    private final DatabaseReference myrefeSalle = database.getReference("Salles");
-
 
 
     public AdminPage() {
@@ -146,16 +142,14 @@ public class AdminPage extends AppCompatActivity {
                         database.getReference("Salles").child(salles.getId()).child("Nom").setValue(edNom.getText().toString());
                         database.getReference("Salles").child(salles.getId()).child("Adresse").setValue(edAdresse.getText().toString());
                         database.getReference("Salles").child(salles.getId()).child("Tel").setValue(edTel.getText().toString());
+                        Toast.makeText(getApplicationContext(),"Salle modifiée !",Toast.LENGTH_SHORT).show();
 //                        database.getReference("Salles").child(salles.getId()).child("Longitude").setValue(edLongitude.getText());
                         Intent i = new Intent(getApplicationContext(), AdminPage.class);
                         startActivity(i);
                     }
                 });
                 dialog.show();
-//                Intent i = new Intent(getApplicationContext(),MainActivity.class);
-//                startActivity(i);
             }
-
 
             private void deleteSalle(Salles salles){
                 AlertDialog.Builder builder = new AlertDialog.Builder(AdminPage.this);
@@ -165,6 +159,7 @@ public class AdminPage extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         database.getReference("Salles").child(salles.getId()).removeValue();
+                        Toast.makeText(getApplicationContext(),"Salle supprimer !",Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(getApplicationContext(), AdminPage.class);
                         startActivity(i);
                         dialog.cancel();
@@ -183,7 +178,6 @@ public class AdminPage extends AppCompatActivity {
 
         });
 
-
         fbAdd = findViewById(R.id.floatingAddButton);
         fbAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -193,7 +187,6 @@ public class AdminPage extends AppCompatActivity {
             }
         });
 
-
         fbOut = findViewById(R.id.btnOut);
         fbOut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -202,24 +195,5 @@ public class AdminPage extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
-
     }
-
-
 }
-
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        adapter.startListening();
-//    }
-//
-//    @Override
-//    protected void onStop() {
-//        super.onStop();
-//        adapter.stopListening();
-//    }
-
-//}

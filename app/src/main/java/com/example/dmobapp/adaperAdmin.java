@@ -23,11 +23,6 @@ public class adaperAdmin extends RecyclerView.Adapter<adaperAdmin.myviewHolder> 
 
     ArrayList<Salles> listSalles;
     Context context;
-    FirebaseDatabase db = FirebaseDatabase.getInstance();
-    ImageView imgEdit, imgLeave;
-    View v;
-    private DatabaseReference myref;
-
     private OnCallBack onCallBack;
 
     public adaperAdmin(ArrayList<Salles> listSalles, Context context) {
@@ -86,15 +81,6 @@ public class adaperAdmin extends RecyclerView.Adapter<adaperAdmin.myviewHolder> 
             imgEdit = (ImageView) itemView.findViewById(R.id.imgModifier);
 
             imgLeave = (ImageView) itemView.findViewById(R.id.imgSupprimer);
-
-            imgEdit.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    System.out.println("dsffdsdsafasdffsdafdsa");
-                }
-            });
-
 
         }
 

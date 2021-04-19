@@ -39,33 +39,14 @@ public class LogInFragment extends Fragment {
     }
 
 
-    public void connectUser() {
-        try {
-            if (!etEmail.getText().toString().isEmpty() && !etPassword.getText().toString().isEmpty()) {
-
-                fAuth.signInWithEmailAndPassword(etEmail.getText().toString().trim(), etPassword.getText().toString().trim())
-                        .addOnCompleteListener((Activity) getContext(), new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-//                                    View view = inflater.inflate(R.layout.fragment_salles,container,false);
-                                startActivity(new Intent(getActivity().getApplicationContext(), AdminPage.class));
-                                getActivity().finish();
-//                                    Intent i = new Intent(getActivity(), SallesFragment.class);
-//
-////                                    inflater.inflate(R.layout.fragment_log_in, container, false);
-//                                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout,
-//                                            selectedFragment).commit();
-                            }
-                        });
-            } else {
-                Toast.makeText(getContext(), "Remplissez les champs !", Toast.LENGTH_SHORT).show();
-            }
-
-        } catch (Exception e) {
-            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        view = inflater.inflate(R.layout.fragment_log_in, container, false);
+        attachXml();
+        return view;
     }
-
 
     private void attachXml() {
         try {
@@ -79,7 +60,6 @@ public class LogInFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     connectUser();
-
                 }
             });
         } catch (Exception e) {
@@ -88,12 +68,26 @@ public class LogInFragment extends Fragment {
     }
 
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_log_in, container, false);
-        attachXml();
-        return view;
+    public void connectUser() {
+        try {
+            if (!etEmail.getText().toString().isEmpty() && !etPassword.getText().toString().isEmpty()) {
+
+                fAuth.signInWithEmailAndPassword(etEmail.getText().toString().trim(), etPassword.getText().toString().trim())
+                        .addOnCompleteListener((Activity) getContext(), new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                Toast.makeText(getContext(), "Connexion réussi !", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getActivity().getApplicationContext(), AdminPage.class));
+                                getActivity().finish();
+                            }
+                        });
+            } else {
+                Toast.makeText(getContext(), "Remplissez les champs !", Toast.LENGTH_SHORT).show();
+            }
+
+        } catch (Exception e) {
+            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
+
 }

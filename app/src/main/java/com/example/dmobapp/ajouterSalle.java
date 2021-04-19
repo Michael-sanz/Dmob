@@ -31,7 +31,7 @@ public class ajouterSalle extends AppCompatActivity {
         adresse = (EditText)findViewById(R.id.ajouterAdresse);
         tel = (EditText)findViewById(R.id.ajouterTel);
         lat = (EditText)findViewById(R.id.ajouterLatitude);
-        longitude = (EditText)findViewById(R.id.ajouterLatitude);
+        longitude = (EditText)findViewById(R.id.ajouterLontitude);
 
         retour = (Button)findViewById(R.id.ajouterAnnuler);
         ajouterSalle = (Button)findViewById(R.id.ajouterValider);
@@ -63,7 +63,7 @@ public class ajouterSalle extends AppCompatActivity {
         map.put("Tel",tel.getText().toString());
         map.put("Latitude", Latitude);
         map.put("Longitude", Longitude);
-        if (!nom.getText().toString().isEmpty() & !adresse.getText().toString().isEmpty() &!tel.getText().toString().isEmpty() &!lat.getText().toString().isEmpty() &!longitude.getText().toString().isEmpty())
+        if (!nom.getText().toString().isEmpty() & !adresse.getText().toString().isEmpty() &!tel.getText().toString().isEmpty()) // & !(longitude.getText() == null) & !(longitude.getText() == null) fonctionne pas Number format exception
         {
             FirebaseDatabase.getInstance().getReference().child("Salles").push()
                     .setValue(map)
@@ -83,7 +83,6 @@ public class ajouterSalle extends AppCompatActivity {
                     }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-
                     Toast.makeText(getApplicationContext(),"Ressayer !!! La salle n'a pas été ajoutée",Toast.LENGTH_SHORT).show();
                 }
             });

@@ -26,16 +26,8 @@ import java.util.ArrayList;
 
 public class SallesFragment extends Fragment {
     RecyclerView recyclerView;
-
     ArrayList<Salles> dataHolder;
-
     private DatabaseReference myref;
-
-    FloatingActionButton btnAdd;
-
-    FirebaseAuth firebaseAuth;
-
-
 
     public SallesFragment() {
         // Required empty public constructor

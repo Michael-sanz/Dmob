@@ -8,7 +8,6 @@ public class Salles {
     private String adresse;
     private String tel;
     String id;
-    private LatLng position;
     Double latitude;
     Double longitude;
 
@@ -16,20 +15,15 @@ public class Salles {
     public Salles() {
     }
 
-
-
-    public Salles(String id,String nom, String adresse, String tel, String documentId, Double latitude, Double longitude) {
+    public Salles(String id,String nom, String adresse, String tel, Double latitude, Double longitude) {
         this.id = id;
         this.nom = nom;
         this.adresse = adresse;
         this.tel = tel;
-
         this.latitude = latitude;
         this.longitude = longitude;
 
     }
-
-
 
     public String getNom() {
         return nom;
@@ -77,17 +71,4 @@ public class Salles {
 
 
     public void setId(String id){this.id=id;}
-
-//    public String getKey() {
-//        String cle = getKey(Salles s);
-//        return cle;
-//    }
-
-    //    public LatLng getPosition() {
-//        return position;
-//    }
-//
-//    public void setPosition(LatLng position) {
-//        this.position = position;
-//    }
 }

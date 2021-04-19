@@ -66,6 +66,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback{
                     nomSalle.add(nom);
                     listePosition.add(ll);
                 }
+
 //                for (Map.Entry mapentry : listeNomPos.entrySet()){
 //                    System.out.println(mapentry.getKey());
 //                    System.out.println(mapentry.getValue());
@@ -76,7 +77,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback{
 ////                    gMap.addMarker(new MarkerOptions().position((LatLng) mapentry.getValue()));
 //
 //                }
-
+                System.out.println(nomSalle);
+                System.out.println(listePosition);
                 for (int i=0 ; i<listePosition.size();i++){
                     for (int b=0; b<nomSalle.size();b++){
                         gMap.addMarker(new MarkerOptions().position(listePosition.get(i)).title(nomSalle.get(i)));
