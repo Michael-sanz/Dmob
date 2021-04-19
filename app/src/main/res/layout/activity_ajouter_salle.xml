@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ajouterSalle">
+
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ajouterNom"
+        android:textSize="20sp"
+        android:hint="@string/nom_de_la_salle"
+        android:layout_marginBottom="15dp"
+        android:textColor="#000"
+        android:autofillHints=""
+        android:inputType="text" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ajouterAdresse"
+        android:textSize="20sp"
+        android:hint="@string/adresse_de_la_salle"
+        android:layout_marginBottom="15dp"
+        android:inputType="text"
+        android:textColor="#000"
+        android:autofillHints="" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ajouterTel"
+        android:textSize="20sp"
+        android:hint="@string/t_l_phone_de_la_salle"
+        android:layout_marginBottom="15dp"
+        android:inputType="text"
+        android:textColor="#000"
+        android:autofillHints="" />
+
+
+    <EditText
+        android:id="@+id/ajouterLatitude"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:autofillHints=""
+        android:hint="Latitude"
+        android:inputType="number"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ajouterLontitude"
+        android:textSize="20sp"
+        android:hint="Longitude"
+        android:layout_marginBottom="15dp"
+        android:inputType="text"
+        android:textColor="#000"
+        android:autofillHints="" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/ajouterValider"
+        android:textSize="20sp"
+        android:text="@string/ajouter"
+        android:backgroundTint="@color/vert"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ajouterAnnuler"
+        android:textSize="20sp"
+        android:text="@string/annuler"
+        android:backgroundTint="@color/black"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

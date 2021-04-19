@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1054816109751",
+    "project_id": "dmobapp-1b6b7",
+    "storage_bucket": "dmobapp-1b6b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054816109751:android:31cdf29917165bc7d8b932",
+        "android_client_info": {
+          "package_name": "com.example.dmobapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054816109751-m9qhjd8bp7oc44um1c1f4v7p8btln7o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFFzPiuB4ipJHgrNL_WLskgl1mmx6ytMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054816109751-m9qhjd8bp7oc44um1c1f4v7p8btln7o9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

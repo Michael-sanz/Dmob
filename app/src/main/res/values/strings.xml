@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">DmobApp</string>
+    <string name="salles">Salles</string>
+    <string name="magasins">Magasins</string>
+    <string name="admin">Admin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="salles_fragment">Salles Fragment</string>
+    <string name="fragment_magasin">fragment magasin</string>
+    <string name="login_fragment">Login fragment</string>
+    <string name="connexion">Connexion</string>
+    <string name="connectez_vous">Connectez-vous</string>
+    <string name="google_maps_key">AIzaSyBY3c7RFvwzs06juEg0nzIU7PVERTIV3U8</string>
+    <string name="adresse_e_mail">Adresse E-mail</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="todo">TODO</string>
+    <string name="d_connexion">Déconnexion</string>
+    <string name="ajouter">Ajouter</string>
+    <string name="nom_de_la_salle">Nom de la salle</string>
+    <string name="adresse_de_la_salle">Adresse de la salle</string>
+    <string name="t_l_phone_de_la_salle">Téléphone de la salle</string>
+    <string name="position_de_la_salle">Position de la salle</string>
+    <string name="annuler">Annuler</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+</resources>
